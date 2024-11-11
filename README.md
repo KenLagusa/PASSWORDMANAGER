@@ -22,11 +22,12 @@ Ce projet consiste en la création d’un gestionnaire de mots de passe sécuris
 - **OS** : Module pour la gestion de la console (clear screen) et la vérification de l’existence du fichier de mots de passe.
 
 ## Code et Structure
+Le projet est structuré en plusieurs classes et fichiers Python :
 
-- **Fonction `get_forms()`** : Récupère tous les formulaires de la page web.
-- **Fonction `form_details()`** : Analyse chaque formulaire et collecte les détails des champs.
-- **Fonction `vulnerable()`** : Vérifie les réponses pour détecter des indices de vulnérabilité SQL injection.
-- **Fonction `sql_injection_scan()`** : Coordonne l'analyse et envoie des charges aux formulaires pour tester leur résilience.
+- **AES256** : Cette classe implémente les méthodes de chiffrement et de déchiffrement utilisant AES en mode CBC.
+- **Saver** : Gère la lecture et l’écriture des mots de passe chiffrés dans un fichier JSON.
+- **Gestionnaire de Mots de Passe** : Interface en ligne de commande permettant la saisie du mot de passe maître, ainsi que la gestion des mots de passe via des options de recherche, ajout et suppression.
+  
 
 ## Exemple d’Utilisation
-En exécutant le script et en fournissant l'URL d'une page cible, l’outil analyse les formulaires, exécute les tests d’injection SQL et fournit un retour sur les vulnérabilités potentielles.
+Pour accéder au gestionnaire, l’utilisateur doit saisir le mot de passe maître. Une fois authentifié, il peut naviguer dans le menu pour gérer ses mots de passe de manière sécurisée.
